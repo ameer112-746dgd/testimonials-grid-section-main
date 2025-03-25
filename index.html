@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | Testimonial Grid</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Barlow Semi Condensed', sans-serif;
+      background-color: hsl(210, 46%, 95%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      margin: 0;
+    }
+
+    /* Container */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto;
+      gap: 20px;
+      max-width: 1100px;
+    }
+
+    /* Testimonial Cards */
+    .testimonial {
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      position: relative;
+    }
+
+    /* Specific card styles */
+    .purple {
+      background-color: hsl(263, 55%, 52%);
+      color: white;
+      grid-column: span 2;
+      position: relative;
+    }
+    .purple::before {
+      content: "\201C";
+      font-size: 120px;
+      color: hsla(0, 0%, 100%, 0.3);
+      position: absolute;
+      top: 10px;
+      right: 20px;
+    }
+
+    .dark-blue {
+      background-color: hsl(219, 29%, 14%);
+      color: white;
+    }
+
+    .white {
+      background-color: hsl(0, 0%, 100%);
+      color: hsl(217, 19%, 35%);
+    }
+
+    .black {
+      background-color: hsl(0, 0%, 7%);
+      color: white;
+      grid-column: span 2;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .header img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid hsla(0, 0%, 100%, 0.6);
+    }
+
+    .info h4 {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .info p {
+      margin: 0;
+      font-size: 12px;
+      color: hsla(0, 0%, 81%, 0.8);
+    }
+
+    /* Typography */
+    h3 {
+      font-size: 20px;
+      margin: 15px 0;
+      font-weight: 700;
+    }
+
+    p.quote {
+      font-size: 14px;
+      color: hsla(224, 10%, 45%, 0.8);
+    }
+
+    /* Responsive Mobile Layout */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      .purple, .black {
+        grid-column: span 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="testimonial purple">
+      <div class="header">
+        <img src="images/image-daniel.jpg" alt="Daniel Clifford">
+        <div class="info">
+          <h4>Daniel Clifford</h4>
+          <p>Verified Graduate</p>
+        </div>
+      </div>
+      <h3>I received a job offer mid-course, and the subjects I learned were current...</h3>
+      <p class="quote">“ I was an EMT for many years before I joined the bootcamp... ”</p>
+    </div>
+    <div class="testimonial dark-blue">
+      <div class="header">
+        <img src="images/image-jonathan.jpg" alt="Jonathan Walters">
+        <div class="info">
+          <h4>Jonathan Walters</h4>
+          <p>Verified Graduate</p>
+        </div>
+      </div>
+      <h3>The team was very supportive and kept me motivated</h3>
+      <p class="quote">“ I started as a total newbie with virtually no coding skills... ”</p>
+    </div>
+    <div class="testimonial white">
+      <div class="header">
+        <img src="images/image-kira.jpg" alt="Kira Whittle">
+        <div class="info">
+          <h4>Kira Whittle</h4>
+          <p>Verified Graduate</p>
+        </div>
+      </div>
+      <h3>Such a life-changing experience. Highly recommended!</h3>
+      <p class="quote">“ Before joining the bootcamp, I’ve never written a line of code... ”</p>
+    </div>
+    <div class="testimonial white">
+      <div class="header">
+        <img src="images/image-jeanette.jpg" alt="Jeanette Harmon">
+        <div class="info">
+          <h4>Jeanette Harmon</h4>
+          <p>Verified Graduate</p>
+        </div>
+      </div>
+      <h3>An overall wonderful and rewarding experience</h3>
+      <p class="quote">“ Thank you for the wonderful experience! ”</p>
+    </div>
+    <div class="testimonial black">
+      <div class="header">
+        <img src="images/image-patrick.jpg" alt="Patrick Abrams">
+        <div class="info">
+          <h4>Patrick Abrams</h4>
+          <p>Verified Graduate</p>
+        </div>
+      </div>
+      <h3>Awesome teaching support from TAs...</h3>
+      <p class="quote">“ The staff seem genuinely concerned about my progress... ”</p>
+    </div>
+  </div>
+</body>
+</html>
